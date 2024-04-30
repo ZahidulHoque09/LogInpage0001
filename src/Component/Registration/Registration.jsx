@@ -20,7 +20,7 @@ const Registration = () => {
 
   const [Password,setPassword]=useState("");
 
-  const [Loading,setLoading]=useState(true)
+  const [Loading,setLoading]=useState(false)
 
   const [Eye,setEye]=useState(false);
 
@@ -101,7 +101,7 @@ const HandleSignUp=()=>{
 
       /* =========Sign up a new user ============== */
       
-      createUserWithEmailAndPassword(auth, Email, Passwordassword). 
+    /*   createUserWithEmailAndPassword(auth, Email, Passwordassword). 
       then((userCredential) => {
         console.log(userCredential);
         
@@ -148,7 +148,7 @@ const HandleSignUp=()=>{
 
       
       
-    });  /* .finally (()=>{     =======Errroor
+    }).finally (()=>{    
       setLoading(false)
 
     }); */
@@ -266,7 +266,7 @@ console.log(EmailError,FullNameError,PasswordError);
           autoComplete='off'
           className='w-full py-[22px]
           rounded-lg px-5 border-2 border-blue-200 font-Nunito'
-          onChange={(event)=>setPassword(event.value.taget)}/>
+          onChange={(event)=>setPassword(event.target.value)}/>
 
           
 {PasswordError && (

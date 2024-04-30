@@ -6,6 +6,7 @@ const RegistrationPage = () => {
     <div>
       <Registration/>
     </div>
+    
   )
 }
 
